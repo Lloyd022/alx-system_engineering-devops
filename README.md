@@ -1,3 +1,3 @@
-#!/bin/bash
-$ wc -l file
+##!/bin/bash
+#$ wc -l file
 # alx-system_engineering-devops
