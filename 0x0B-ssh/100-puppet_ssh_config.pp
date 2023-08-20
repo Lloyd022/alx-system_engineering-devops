@@ -1,5 +1,13 @@
-# setup client SSH configuration
+#!/usr/bin/env bash
+# puppet to make changes to our configuration
 
-exec { 'echo "PasswordAuthentication no\nIdentityFile ~/.ssh/school" >> /etc/ssh/ssh_config':
-        path    => '/bin/'
+file { 'etc/ssh/ssh_config':
+	ensure => present,
+	
+content =>"
+
+	   #SSH client configuration
+	   host*
+	   IdentityFile ~/.ssh/school
+	   PasswordAuthentication no
 }
